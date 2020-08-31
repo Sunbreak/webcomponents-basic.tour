@@ -2,6 +2,18 @@
 
 <html>
   <body>
-    <h1>Hello world!</h1>
+    <cool-heading>
+      <h1>Hello world!</h1>
+    </cool-heading>
+
+    <script>
+      class CoolHeading extends HTMLElement {
+        connectedCallback() {
+          console.log('cool heading connected!');
+        }
+      }
+
+      customElements.define('cool-heading', CoolHeading);
+    </script>
   </body>
 </html>
