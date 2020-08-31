@@ -8,8 +8,16 @@
 
     <script>
       class CoolHeading extends HTMLElement {
+        constructor() {
+          super();
+
+          this.addEventListener('click', () => {
+            this.style.color = 'red';
+          });
+        }
+
         connectedCallback() {
-          console.log('cool heading connected!');
+          this.style.color = 'blue';
         }
       }
 
